@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Based Access</title>
+</head>
+<body>
+
+<script>
+    function getLocation() {
+        let location = prompt("Please enter your location:");
+        if (location) {
+            if (location === "punjab" || location === "haryana" || location === "chandigarh") {
+                let username = prompt("Please enter your username:");
+                let password = prompt("Please enter your password:");
+                
+                if (username === "Tanuj" && password === "Tanuj1228") {
+                    alert("Access given");
+                    window.location.href = "https://www.google.co.in/maps/search/" + location;
+                } else {
+                    alert("Wrong credentials");
+                }
+            } else {
+                alert("Access denied");
+            }
+        } else {
+            alert("Location input is required");
+        }
+    }
+
+    getLocation();
+</script>
+
+</body>
+</html>
